@@ -1,6 +1,6 @@
 --- 
 title: "EDP 5334: Statistical Methods"
-author: "R. Noah Padhgett"
+author: "R. Noah Padgett"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
