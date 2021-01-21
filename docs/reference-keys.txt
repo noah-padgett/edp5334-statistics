@@ -1,6 +1,5 @@
 course-description
 intro
-visualizing-one-variable
 data
 basic-principles-of-ggplot2
 create-plots-with-ggplot2
