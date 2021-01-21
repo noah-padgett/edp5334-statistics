@@ -2,5 +2,6 @@ book_filename: "edp5334-statistics"
 language:
   ui:
     chapter_name: "Chapter "
+before_chapter_script: ["code/load_packages.R"]
 delete_merged_file: true
 output_dir: "docs"

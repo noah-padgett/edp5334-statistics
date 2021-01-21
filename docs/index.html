@@ -24,7 +24,7 @@
 <meta name="author" content="R. Noah Padgett" />
 
 
-<meta name="date" content="2021-01-20" />
+<meta name="date" content="2021-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,9 +32,9 @@
   
   
 
-<link rel="next" href="prerequisites.html"/>
+<link rel="next" href="intro.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.5.1/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,6 +51,13 @@
 
 
 
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<script src="libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 
 
 <style type="text/css">
@@ -134,16 +141,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course Description</a></li>
-<li class="chapter" data-level="2" data-path="prerequisites.html"><a href="prerequisites.html"><i class="fa fa-check"></i><b>2</b> Prerequisites</a></li>
-<li class="chapter" data-level="3" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>3</b> Introduction</a></li>
-<li class="chapter" data-level="4" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>4</b> Literature</a></li>
-<li class="chapter" data-level="5" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>5</b> Methods</a></li>
-<li class="chapter" data-level="6" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>6</b> Applications</a>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction to Visualization</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>6.1</b> Example one</a></li>
-<li class="chapter" data-level="6.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>6.2</b> Example two</a></li>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#visualizing-one-variable"><i class="fa fa-check"></i><b>2.1</b> Visualizing One Variable</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>7</b> Final Words</a></li>
+<li class="chapter" data-level="3" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i><b>3</b> Data</a></li>
+<li class="chapter" data-level="4" data-path="basic-principles-of-ggplot2.html"><a href="basic-principles-of-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Basic principles of <code>{ggplot2}</code></a></li>
+<li class="chapter" data-level="5" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html"><i class="fa fa-check"></i><b>5</b> Create plots with <code>{ggplot2}</code></a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#scatter-plot"><i class="fa fa-check"></i><b>5.1</b> Scatter plot</a></li>
+<li class="chapter" data-level="5.2" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#line-plot"><i class="fa fa-check"></i><b>5.2</b> Line plot</a></li>
+<li class="chapter" data-level="5.3" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#combination-of-line-and-points"><i class="fa fa-check"></i><b>5.3</b> Combination of line and points</a></li>
+<li class="chapter" data-level="5.4" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#histogram"><i class="fa fa-check"></i><b>5.4</b> Histogram</a></li>
+<li class="chapter" data-level="5.5" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#density-plot"><i class="fa fa-check"></i><b>5.5</b> Density plot</a></li>
+<li class="chapter" data-level="5.6" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#combination-of-histogram-and-densities"><i class="fa fa-check"></i><b>5.6</b> Combination of histogram and densities</a></li>
+<li class="chapter" data-level="5.7" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#boxplot"><i class="fa fa-check"></i><b>5.7</b> Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#barplot"><i class="fa fa-check"></i><b>5.8</b> Barplot</a></li>
+<li class="chapter" data-level="5.9" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#further-personalization"><i class="fa fa-check"></i><b>5.9</b> Further personalization</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#title-and-axis-labels"><i class="fa fa-check"></i><b>5.9.1</b> Title and axis labels</a></li>
+<li class="chapter" data-level="5.9.2" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#axis-ticks"><i class="fa fa-check"></i><b>5.9.2</b> Axis ticks</a></li>
+<li class="chapter" data-level="5.9.3" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#log-transformations"><i class="fa fa-check"></i><b>5.9.3</b> Log transformations</a></li>
+<li class="chapter" data-level="5.9.4" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#limits"><i class="fa fa-check"></i><b>5.9.4</b> Limits</a></li>
+<li class="chapter" data-level="5.9.5" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#legend"><i class="fa fa-check"></i><b>5.9.5</b> Legend</a></li>
+<li class="chapter" data-level="5.9.6" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#shape-color-size-and-transparency"><i class="fa fa-check"></i><b>5.9.6</b> Shape, color, size and transparency</a></li>
+<li class="chapter" data-level="5.9.7" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#text-and-labels"><i class="fa fa-check"></i><b>5.9.7</b> Text and labels</a></li>
+<li class="chapter" data-level="5.9.8" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#smooth-and-regression-lines"><i class="fa fa-check"></i><b>5.9.8</b> Smooth and regression lines</a></li>
+<li class="chapter" data-level="5.9.9" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#facets"><i class="fa fa-check"></i><b>5.9.9</b> Facets</a></li>
+<li class="chapter" data-level="5.9.10" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#themes"><i class="fa fa-check"></i><b>5.9.10</b> Themes</a></li>
+<li class="chapter" data-level="5.9.11" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#interactive-plot-with-plotly"><i class="fa fa-check"></i><b>5.9.11</b> Interactive plot with <code>{plotly}</code></a></li>
+<li class="chapter" data-level="5.9.12" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#combine-plots-with-patchwork"><i class="fa fa-check"></i><b>5.9.12</b> Combine plots with <code>{patchwork}</code></a></li>
+<li class="chapter" data-level="5.9.13" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#flip-coordinates"><i class="fa fa-check"></i><b>5.9.13</b> Flip coordinates</a></li>
+<li class="chapter" data-level="5.9.14" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#save-plot"><i class="fa fa-check"></i><b>5.9.14</b> Save plot</a></li>
+<li class="chapter" data-level="5.9.15" data-path="create-plots-with-ggplot2.html"><a href="create-plots-with-ggplot2.html#managing-dates"><i class="fa fa-check"></i><b>5.9.15</b> Managing dates</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="to-go-further.html"><a href="to-go-further.html"><i class="fa fa-check"></i><b>6</b> To go further</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -168,11 +201,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">EDP 5334: Statistical Methods</h1>
 <p class="author"><em>R. Noah Padgett</em></p>
-<p class="date"><em>2021-01-20</em></p>
+<p class="date"><em>2021-01-21</em></p>
 </div>
 <div id="course-description" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Course Description</h1>
 <p>Elementary method of organizing, analyzing, and interpreting quantitative data, with particular reference to school-related issues. Exercises in the computation of the most commonly employed statistical indices in tabulation, graphic representation, and presentation of data in educational reports. The techniques used are also applicable to other fields.</p>
+
 </div>
             </section>
 
@@ -180,7 +214,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 
-<a href="prerequisites.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -222,7 +256,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["edp5334-statistics.pdf", "edp5334-statistics.epub"],
+"download": ["edp5334-statistics.pdf"],
 "toc": {
 "collapse": "subsection"
 }
@@ -230,20 +264,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
